@@ -65,11 +65,30 @@ console.log('company team:', companyEmployees);
 
 //MLS 1
 //stamp in console dati per ogni membro del team
+// for (let i = 0; i < companyEmployees.length; i++){
+
+//     for (let key in companyEmployees[i]){
+//         console.log(companyEmployees[i][key]);
+//     }
+
+
+// }
+
+//MLS 2
+//stamp in DOM dati per ogni membro del team
+let stampTestEl = document.querySelector('.stamp-test');
+
 for (let i = 0; i < companyEmployees.length; i++){
 
-    for (let key in companyEmployees[i]){
-        console.log(companyEmployees[i][key]);
-    }
+    let currentEmployee = companyEmployees[i];
+    let fullName = currentEmployee.firstName + ' ' + currentEmployee.lastName;
+    let jobRole = currentEmployee.jobRole
+    let profileImg = currentEmployee.profileImg;
 
+    let employeeCard = `
+    <div> current employee name is ${fullName}, is the ${jobRole}, and has got this funny face: ${profileImg} </div>
+    `;
+
+    stampTestEl.innerHTML += employeeCard;
 
 }
