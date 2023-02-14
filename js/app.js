@@ -8,6 +8,7 @@ const person = {
 
 }
 
+//MLS 0
 let companyEmployees = [
 
     {
@@ -61,3 +62,14 @@ let companyEmployees = [
 ]
 
 console.log('company team:', companyEmployees);
+
+//MLS 1
+//stamp in console dati per ogni membro del team
+for (let i = 0; i < companyEmployees.length; i++){
+
+    for (let key in companyEmployees[i]){
+        console.log(companyEmployees[i][key]);
+    }
+
+
+}
